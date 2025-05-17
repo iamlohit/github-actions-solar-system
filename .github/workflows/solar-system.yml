@@ -72,8 +72,6 @@ jobs:
     docker:
       needs: [unit-testing, code-coverage]
       runs-on: ubuntu-latest
-      container:
-        image: node:20
       steps:
         - uses: actions/checkout@v4
         - name: Login to GHCR
