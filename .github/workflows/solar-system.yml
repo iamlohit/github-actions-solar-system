@@ -109,5 +109,5 @@ jobs:
             kubeconfig: ${{ secrets.KUBECONFIG }}
         - name: Verify Cluster connection
           run: |
-          "cat ~/.kube/config"
-          kubectl version -o yaml
+            cat ~/.kube/config
+            kubectl version -o yaml
