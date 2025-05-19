@@ -128,4 +128,7 @@ jobs:
         - run: cat kubernetes/development/*.yaml
           if: always()
     integration-test:
+      needs: [dev-deploy]
       uses: ./.github/workflows/reusable-workflow.yml
+      with:
+        ingress-url: ${{ env.INGRESS_IP }}
