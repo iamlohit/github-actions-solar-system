@@ -127,3 +127,5 @@ jobs:
             INGRESS_IP: ${{ env.INGRESS_IP }}
         - run: cat kubernetes/development/*.yaml
           if: always()
+    integration-test:
+      uses: ./.github/workflows/reusable-workflow.yml
